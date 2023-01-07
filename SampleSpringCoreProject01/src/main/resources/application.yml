@@ -1,3 +1,4 @@
+#debug: true
 server:
   credentials:
     - list1:
@@ -14,3 +15,10 @@ server:
       - key22:
         username: root
         password: rootpass
+  users: 
+    root:
+      username: root
+      password: rootpass
+    guest:
+      username: guest
+      password: guestpass
