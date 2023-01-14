@@ -1,0 +1,25 @@
+#debug: true
+server:
+  applicationName : SampleSpringApplicationMain
+  credentials:
+    - list1:
+      - key1:
+        username: root11
+        password: rootpass11
+      - key2:
+        username: root12
+        password: rootpass12
+    - list2:
+      - key21:
+        username: root21
+        password: rootpass21
+      - key22:
+        username: root22
+        password: rootpass22
+  users: 
+    root:
+      username: root
+      password: rootpass
+    guest:
+      username: guest
+      password: guestpass

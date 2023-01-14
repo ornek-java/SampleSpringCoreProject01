@@ -1,16 +1,19 @@
 package com.ndr.samples.springcore01;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+
+import com.ndr.samples.springcore.model.Credential;
 
 
 
 @Component
+@Configuration
 @ConfigurationProperties(prefix = "server")
 public class SampleConfiguration {
 
@@ -20,26 +23,16 @@ public class SampleConfiguration {
 	
 	private Map<String, Credential> users;
 	
+	private String applicationName;
+	
 
-	public static class Credential {
 
-		private String username;
-		private String password;
-		public String getUsername() {
-			return username;
-		}
-		public void setUsername(String username) {
-			this.username = username;
-		}
-		public String getPassword() {
-			return password;
-		}
-		public void setPassword(String password) {
-			this.password = password;
-		}
+	public String getApplicationName() {
+		return applicationName;
+	}
 
-		// Getter/Setter
-		
+	public void setApplicationName(String applicationName) {
+		this.applicationName = applicationName;
 	}
 
 	public Map<String, List<Credential>> getCredentials() {
